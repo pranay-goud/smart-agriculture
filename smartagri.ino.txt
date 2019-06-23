@@ -1,0 +1,54 @@
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@pranay-goud 
+0
+0 0 pranay-goud/smart-agriculture
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Security  Insights  Settings
+smart-agriculture/arduino
+@pranay-goud pranay-goud Create arduino
+d80bf3b 9 minutes ago
+25 lines (18 sloc)  508 Bytes
+    
+dht DHT;
+void setup(){
+  Serial.begin(9800);
+  delay(500);
+  Serial.println("Humidity & temperature Sensor\n");
+  delay(1000);
+
+}
+ 
+void loop(){
+    DHT.read11(dht_apin);
+    
+    Serial.print("Current humidity = ");
+    Serial.print(DHT.humidity);
+    Serial.print("%  ");
+    Serial.print("temperature = ");
+    Serial.print(DHT.temperature); 
+    Serial.println("C  ");
+    
+    delay(5000);//Wait 5 seconds before accessing sensor again.
+ 
+  //Fastest should be once every two seconds.
+ 
+}// end loop() 
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
